@@ -8,8 +8,8 @@ RUN apt-get update &&\
     rm -rf /var/lib/apt/lists/
 
 #install python dependencies
-COPY req_prod .txt
-RUN pip install --user -r req_prod.txt
+COPY req_production.txt .
+RUN pip install --user -r req_production.txt
 
 #STAGE 2 :Final
 FROM python:3.9-slim
