@@ -1,0 +1,18 @@
+artifact_path: model
+flavors:
+  keras:
+    data: data
+    keras_backend: tensorflow
+    keras_version: 3.8.0
+    save_exported_model: false
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.keras
+    python_version: 3.11.9
+mlflow_version: 2.20.3
+model_size_bytes: 60146377
+model_uuid: 7f684e33d98b42869f5c47c3df4f22e7
+run_id: 7b0a52b734ab49e9b73b3865defa609a
+utc_time_created: '2025-03-02 05:46:43.813998'

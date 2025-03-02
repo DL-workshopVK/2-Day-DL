@@ -86,11 +86,15 @@ def train_model_mlflow(config_file):
         )
         train_loss = history.history['loss'][-1]
         validation_loss = history.history['val_loss'][-1]
+        validation_accuracy = history.history['val_accuracy'][-1]
+
+
         mlflow.log_param("epochs",epochs)
         mlflow.log_param("Loss",loss)
         mlflow.log_param("Validation Loss",validation_loss)
         mlflow.log_param("Metrics",metrics)
         mlflow.log_param("Optimizer",optimizer)
+        mlflow.log_param("Validation Accuracy",validation_accuracy)
 
         tracking_uri_type_store = urlparse(mlflow.get_artifact_uri()).scheme
         if tracking_uri_type_store != "file":
