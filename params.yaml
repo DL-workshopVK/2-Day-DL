@@ -15,7 +15,7 @@ train:
 
 model:
   name: VGG19
-  trainable: True
+  trainable: False
   train_path: "data/preprossed/train"
   test_path: "data/preprossed/test"
   image_size: [255,255]
@@ -38,7 +38,7 @@ img_augment:
 model_dir: models
 
 mlflow_config:
-  artifact_dir: artifacts
+  artifact_dir: artifact
   experiment_name: Deep_Learning_VGG19
   run_name: mlops
   registered_model_name: Deep_Learning_model
